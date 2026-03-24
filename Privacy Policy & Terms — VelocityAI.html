@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy & Terms — VelocityAI</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #13100a;
+  --deep: #1a1208;
+  --panel: #221a0e;
+  --border: #3d2e18;
+  --border2: #5c4522;
+  --cream: #f0e6d2;
+  --muted: #9a8060;
+  --dim: #6b5230;
+  --gold: #c9972a;
+  --gold2: #e8b84b;
+  --text: #ede0cc;
+}
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background: var(--ink);
+  color: var(--text);
+  font-family: 'Jost', sans-serif;
+  min-height: 100vh;
+  line-height: 1.7;
+}
+body::before {
+  content:''; position:fixed; inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events:none; z-index:9995; opacity:.5;
+}
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(19,16,10,0.97);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(20px);
+  padding: 0 40px;
+  height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; font-weight: 600;
+  display: flex; align-items: baseline; gap: 3px;
+}
+.brand .v { color: var(--gold2); }
+.brand .ai { color: var(--muted); font-weight: 300; font-style: italic; }
+.nav-back {
+  font-size: 12px; color: var(--muted);
+  text-decoration: none; letter-spacing: .5px;
+  transition: color .2s;
+}
+.nav-back:hover { color: var(--gold2); }
+
+.hero {
+  padding: 120px 40px 60px;
+  max-width: 800px;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--border);
+}
+.eyebrow {
+  font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--gold); font-family: 'JetBrains Mono', monospace;
+  margin-bottom: 16px;
+}
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 300; line-height: 1.05;
+  letter-spacing: -1px; margin-bottom: 16px;
+}
+.hero h1 em { font-style: italic; color: var(--gold2); }
+.hero-sub {
+  color: var(--muted); font-size: 14px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 40px 100px;
+}
+
+.section {
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--border);
+}
+.section:last-child { border-bottom: none; }
+
+.section-label {
+  font-size: 9px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--gold); font-family: 'JetBrains Mono', monospace;
+  margin-bottom: 12px;
+}
+.section h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px; font-weight: 600;
+  margin-bottom: 20px; color: var(--cream);
+}
+.section p {
+  font-size: 14px; color: var(--muted);
+  margin-bottom: 16px; line-height: 1.8;
+}
+.section ul {
+  list-style: none; padding: 0;
+  margin-bottom: 16px;
+}
+.section ul li {
+  font-size: 14px; color: var(--muted);
+  padding: 6px 0 6px 20px;
+  position: relative; line-height: 1.7;
+}
+.section ul li::before {
+  content: '—';
+  position: absolute; left: 0;
+  color: var(--gold); font-family: 'JetBrains Mono', monospace;
+}
+
+.highlight-box {
+  background: var(--panel);
+  border: 1px solid var(--border2);
+  border-left: 3px solid var(--gold);
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin: 24px 0;
+}
+.highlight-box p {
+  margin: 0; font-size: 13px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--cream); line-height: 1.7;
+}
+
+.optin-flow {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 24px 0;
+}
+.optin-step {
+  display: flex; align-items: flex-start; gap: 16px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+}
+.optin-step:last-child { border-bottom: none; }
+.step-num {
+  width: 28px; height: 28px;
+  background: var(--gold);
+  color: var(--ink);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700;
+  flex-shrink: 0; margin-top: 2px;
+  font-family: 'JetBrains Mono', monospace;
+}
+.step-text { font-size: 13px; color: var(--muted); line-height: 1.6; }
+.step-text strong { color: var(--cream); font-weight: 600; }
+
+.contact-box {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex; gap: 32px; flex-wrap: wrap;
+}
+.contact-item { font-size: 13px; }
+.contact-item .label {
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--dim); font-family: 'JetBrains Mono', monospace;
+  margin-bottom: 4px;
+}
+.contact-item a, .contact-item span {
+  color: var(--gold2); text-decoration: none;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 24px 40px;
+  text-align: center;
+  font-size: 11px; color: var(--dim);
+  font-family: 'JetBrains Mono', monospace;
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand"><span class="v">Velocity</span><span class="ai">AI</span></div>
+  <a href="/" class="nav-back">← Back to VelocityAI</a>
+</nav>
+
+<div class="hero">
+  <div class="eyebrow">// Legal · Compliance</div>
+  <h1>Privacy Policy &amp;<br><em>Terms of Service</em></h1>
+  <div class="hero-sub">Last updated: March 2026 · VelocityAI · Elizabeth Robinson</div>
+</div>
+
+<div class="content">
+
+  <!-- SMS OPT-IN -->
+  <div class="section">
+    <div class="section-label">SMS Messaging</div>
+    <h2>SMS Opt-In &amp; Consent</h2>
+    <p>VelocityAI sends SMS messages only to individuals who have provided explicit consent. By providing your phone number to our AI agents, you agree to receive appointment confirmations, reminders, and follow-up messages via SMS.</p>
+
+    <div class="highlight-box">
+      <p>Message and data rates may apply. You can opt out at any time by replying <strong>STOP</strong> to any message. Reply <strong>HELP</strong> for assistance. Message frequency varies.</p>
+    </div>
+
+    <p>Our SMS opt-in process works as follows:</p>
+
+    <div class="optin-flow">
+      <div class="optin-step">
+        <div class="step-num">1</div>
+        <div class="step-text"><strong>Customer initiates contact</strong> — A customer calls our AI receptionist or interacts with our AI agent to request a service or appointment.</div>
+      </div>
+      <div class="optin-step">
+        <div class="step-num">2</div>
+        <div class="step-text"><strong>Agent requests phone number</strong> — Our AI agent asks: "What's the best phone number for a text confirmation?" — making clear that a text message will be sent.</div>
+      </div>
+      <div class="optin-step">
+        <div class="step-num">3</div>
+        <div class="step-text"><strong>Customer provides verbal consent</strong> — By providing their phone number, the customer explicitly consents to receive SMS messages related to their request.</div>
+      </div>
+      <div class="optin-step">
+        <div class="step-num">4</div>
+        <div class="step-text"><strong>Confirmation sent</strong> — An SMS confirmation is sent immediately, including opt-out instructions. Example: "Hi [Name]! Your appointment is confirmed for [date] at [time]. Reply STOP to opt out."</div>
+      </div>
+    </div>
+
+    <p>SMS messages sent by VelocityAI include:</p>
+    <ul>
+      <li>Appointment confirmations and reminders</li>
+      <li>Follow-up summaries after AI agent conversations</li>
+      <li>Requests for additional information (e.g., email address for calendar invites)</li>
+    </ul>
+
+    <p>All SMS messages include opt-out instructions. To stop receiving messages at any time, reply <strong>STOP</strong>. To get help, reply <strong>HELP</strong> or contact us at erobin456@gmail.com.</p>
+  </div>
+
+  <!-- PRIVACY POLICY -->
+  <div class="section">
+    <div class="section-label">Privacy</div>
+    <h2>Privacy Policy</h2>
+    <p>VelocityAI ("we", "us", or "our") is committed to protecting your personal information. This Privacy Policy explains how we collect, use, and protect your data when you interact with our AI agent platform.</p>
+
+    <p><strong style="color:var(--cream)">Information We Collect</strong></p>
+    <ul>
+      <li>Name and contact information provided during AI agent interactions</li>
+      <li>Phone numbers provided for SMS appointment confirmations</li>
+      <li>Email addresses provided for calendar invites and follow-ups</li>
+      <li>Appointment details including date, time, and service type</li>
+      <li>Call recordings and transcripts for quality assurance</li>
+    </ul>
+
+    <p><strong style="color:var(--cream)">How We Use Your Information</strong></p>
+    <ul>
+      <li>To send appointment confirmations and reminders via SMS and email</li>
+      <li>To provide AI-powered customer service and scheduling</li>
+      <li>To improve our AI agent performance and accuracy</li>
+      <li>To comply with legal obligations</li>
+    </ul>
+
+    <p><strong style="color:var(--cream)">Data Sharing</strong></p>
+    <p>We do not sell your personal information. We may share data with service providers (Twilio for SMS, Resend for email, Anthropic for AI processing) solely to deliver our services. All providers are bound by data protection agreements.</p>
+
+    <p><strong style="color:var(--cream)">Data Retention</strong></p>
+    <p>We retain your information for as long as necessary to provide our services and comply with legal obligations. You may request deletion of your data at any time by contacting us.</p>
+  </div>
+
+  <!-- TERMS -->
+  <div class="section">
+    <div class="section-label">Terms</div>
+    <h2>Terms of Service</h2>
+    <p>By using VelocityAI's services, you agree to these Terms of Service. Our AI agents are designed to assist with scheduling, customer support, and business automation. They are not a substitute for professional medical, legal, or financial advice.</p>
+
+    <ul>
+      <li>You agree to provide accurate information when interacting with our AI agents</li>
+      <li>You agree to receive SMS messages when providing your phone number to our agents</li>
+      <li>You may opt out of SMS messages at any time by replying STOP</li>
+      <li>VelocityAI reserves the right to modify these terms at any time</li>
+      <li>These terms are governed by the laws of the State of Kentucky</li>
+    </ul>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="section">
+    <div class="section-label">Contact</div>
+    <h2>Contact Us</h2>
+    <p>For privacy inquiries, opt-out requests, or questions about these terms, contact us:</p>
+    <div class="contact-box">
+      <div class="contact-item">
+        <div class="label">Email</div>
+        <a href="mailto:erobin456@gmail.com">erobin456@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <div class="label">Phone</div>
+        <a href="tel:+15139515317">+1 (513) 951-5317</a>
+      </div>
+      <div class="contact-item">
+        <div class="label">Business</div>
+        <span>VelocityAI · Elizabeth Robinson</span>
+      </div>
+      <div class="contact-item">
+        <div class="label">Location</div>
+        <span>Cincinnati, Ohio 45230</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 VelocityAI · Elizabeth Robinson · All rights reserved
+</footer>
+
+</body>
+</html>
